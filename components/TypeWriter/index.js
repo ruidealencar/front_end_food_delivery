@@ -13,7 +13,7 @@ export default function TypeWriter(props) {
           currentText += "|"
         }
         setPhrase(currentText);
-      }, 200 + (index * 100));
+      }, 200 + (index * 70));
     })
   }, [])
 
