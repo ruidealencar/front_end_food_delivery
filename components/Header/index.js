@@ -20,7 +20,10 @@ export default function Header () {
           </a>
         </Link>
       </Navbar.Brand>
-      <SearchBox />
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
+        <SearchBox />
+      </Navbar.Collapse>
     </Navbar>
   )
 }
