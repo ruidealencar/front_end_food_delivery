@@ -1,16 +1,16 @@
 import useSWR from 'swr';
 
-export default function getCategories() {
+export default function getRestaurant(id) {
   const fetcher = (...args) => fetch(...args).then(res => res.json());
 
   const { data, error } = useSWR(
-    `${process.env.apiUrl}/api/categories`,
+    id ? `${process.env.apiUrl}/api/restaurants/${id}` : null,
     fetcher,
       { revalidateOnFocus: false }
   )
 
   return {
-    categories: data,
+    restaurant: data,
     isLoading: !error && !data,
     isError: error
   }

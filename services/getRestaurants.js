@@ -22,7 +22,7 @@ export default function getRestaurants() {
       { revalidateOnFocus: false }
   )
 
-  return { 
+  return {
     restaurants: data,
     isLoading: !error && !data,
     isError: error
